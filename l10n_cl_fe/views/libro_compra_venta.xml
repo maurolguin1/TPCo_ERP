@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    <!--<data>-->
 <!--
         <record id="view_electronic_stock_picking_filter" model="ir.ui.view">
             <field name="name">l10n_cl.stock_picking.search</field>
@@ -144,5 +144,5 @@
             parent="account.menu_finance_reports"
             groups="account.group_account_manager"
             sequence="3"/>
-    </data>
+    <!--</data>-->
 </odoo>

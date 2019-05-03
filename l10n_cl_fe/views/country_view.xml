@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    <!--<data>-->
 
         <record id="view_res_country_form" model="ir.ui.view">
             <field name="name">res.country.form</field>
@@ -28,5 +28,5 @@
             </field>
         </record>
 
-    </data>
+    <!--</data>-->
 </odoo>

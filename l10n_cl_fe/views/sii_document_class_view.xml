@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    <!--<data>-->
 
         <record id="view_sii_document_class_form" model="ir.ui.view">
             <field name="name">sii.document_class.form</field>
@@ -51,5 +51,5 @@
 
         <menuitem name="Document Classes" action="act_sii_document_class" id="menu_action_sii_document_class" parent="l10n_cl_fe.menu_sii_config"/>
 
-    </data>
+    <!--</data>-->
 </odoo>

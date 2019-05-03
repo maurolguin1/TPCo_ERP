@@ -10,6 +10,7 @@
         'delivery',
         'sale_stock',
         'l10n_cl_fe',
+        'stock_enterprise'
         ],
     'description': u'''
 \n\nMódulo de Guías de Despacho de la localización Chilena.\n\n\nIncluye:\n

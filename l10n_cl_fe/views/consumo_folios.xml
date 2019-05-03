@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    <!--<data>-->
         <record id="electronic_consumo_folios_tree" model="ir.ui.view">
             <field name="name">l10n_cl.libro_compra_venta.tree</field>
             <field name="model">account.move.consumo_folios</field>
@@ -30,16 +30,17 @@
               <search string="Buscar Consumo de Folios">
                   <field name="name"/>
                   <field name="fecha_inicio"/>
-                  <filter string="Procesado" domain="[('state','=','Proceso')]"/>
-                  <filter string="Rechazado" domain="[('state','=', 'Rechazado')]"/>
-                  <filter string="Anulado" domain="[('state','=','Anulado')]"/>
-                  <filter string="Posted" domain="[('state','=','done')]"/>
+                  <filter string="Procesado" name="procesado" domain="[('state','=','Proceso')]"/>
+                  <filter string="Rechazado" name="rechazado" domain="[('state','=', 'Rechazado')]"/>
+                  <filter string="Anulado" name="anulado" domain="[('state','=','Anulado')]"/>
+                  <filter string="Posted" name="posted" domain="[('state','=','done')]"/>
                   <group expand="0" string="Group By">
-                      <filter string="Consumos Mensuales Válidos" domain="[('state', '=', 'Proceso')]" context="{'group_by':'fecha_inicio'}"/>
+                      <filter string="Consumos Mensuales Válidos" name="consumos_mensuales_validos"
+                              domain="[('state', '=', 'Proceso')]" context="{'group_by':'fecha_inicio'}"/>
                   </group>
               </search>
           </field>
-      </record>
+        </record>
 
         <record id="view_electroinic_consumo_folios_form" model="ir.ui.view">
             <field name="name">l10n_cl.consumo_folios.form</field>
@@ -153,5 +154,5 @@
             parent="account.menu_finance_reports"
             groups="account.group_account_manager"
             sequence="3"/>
-    </data>
+    <!--</data>-->
 </odoo>

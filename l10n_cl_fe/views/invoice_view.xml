@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    <!--<data>-->
       <record id="view_account_invoice_filter" model="ir.ui.view">
           <field name="name">l10n_cl.invoice.search</field>
           <field name="model">account.invoice</field>
@@ -15,8 +15,8 @@
                 <field name="sii_document_class_id"/>
               </field>
               <xpath expr="//group[last()]" position="inside">
-                  <filter string="Document Type" icon="terp-folder-orange" domain="[]" context="{'group_by':'sii_document_class_id'}"/>
               </xpath>
+              <!--<filter string="Document Type" icon="terp-folder-orange" domain="[]" context="{'group_by':'sii_document_class_id'}"/>-->
           </field>
       </record>
 
@@ -46,7 +46,7 @@
             <field name="name">account.invoice.sii.form</field>
             <field name="inherit_id" ref="account.invoice_form" />
             <field name="arch" type="xml">
-              <form>
+              <form position="inside">
                   <field name="sii_document_class_id" invisible="1"/>
                   <field name="available_journal_document_class_ids" invisible="1"/>
                   <field name="use_documents" invisible="1"/>
@@ -54,13 +54,13 @@
                   <field name="move_name" invisible="1"/>
               </form>
 
-              <button name="invoice_print" position="after">
+              <button name="action_invoice_draft" position="after">
                  <button string="Imprimir Cedible" type="object" name="print_cedible" />
               </button>
               <field name="invoice_line_tax_ids" position="attributes">
-                <attribute name="required">1</attribute>    
+                <attribute name="required">1</attribute>
               </field>
-              
+
 
               <!--
               <button name="invoice_cancel" position="attributes">
@@ -76,9 +76,9 @@
               </xpath>
 
               <xpath expr="//form/sheet/h1" position="after">
-                      <label string="- Next Number: " attrs="{'invisible': ['|',('document_number','!=',False),('state','!=','draft')]}" class="oe_inline"/>
-                      <field name="next_invoice_number" attrs="{'invisible': ['|',('document_number','!=',False),('state','!=','draft')]}" class="oe_inline"/>
-                      <field name="document_number" class="oe_inline"/>
+                  <field name="document_number" class="oe_inline"/>
+                  <label string="- Next Number: " for="next_invoice_number" attrs="{'invisible': ['|',('document_number','!=',False),('state','!=','draft')]}" class="oe_inline"/>
+                  <field name="next_invoice_number" attrs="{'invisible': ['|',('document_number','!=',False),('state','!=','draft')]}" class="oe_inline"/>
               </xpath>
 
               <field name='name' position="attributes">
@@ -320,7 +320,7 @@
             <field eval="False" name="view_id"/>
             <field name="domain">[('type','in',('out_invoice','out_refund'))]</field>
             <field name="context">{'type':'out_invoice', 'journal_type': 'sale'}</field>
-            <field name="search_view_id" ref="account.view_account_invoice_filter_inherit_invoices"/>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
             <field name="help" type="html">
               <p class="oe_view_nocontent_create">
                 Click to create a customer invoice.
@@ -345,5 +345,5 @@
         </record>
 
         <menuitem action="action_invoice_tree1" id="menu_action_invoice_tree1" parent="menu_sii_config" sequence="1"/>
-    </data>
+    <!--</data>-->-->
 </odoo>

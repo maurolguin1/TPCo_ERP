@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <data>
+    <!--<data>-->
 
         <!-- Vista de formulario de la Secuencia -->
         <record id="view_sequence_dte_caf_form" model="ir.ui.view">
@@ -145,5 +145,5 @@
              <!-- Top menu item -->
         <!-- Top menu item -->
 
-    </data>
+    <!--</data>-->
 </odoo>

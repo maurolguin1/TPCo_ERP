@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="False">
+    <data noupdate="0">
 
         <record id="view_sii_concept_type_form" model="ir.ui.view">
             <field name="name">sii.concept_type.form</field>

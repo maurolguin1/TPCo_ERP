@@ -79,20 +79,21 @@
             <field name="name">view.clean.signature.confirmation</field>
             <field name="model">res.users</field>
             <field name="arch" type="xml">
-        				<form string="Clean Signature Information">
-        					<group>
-        						<label string="This operation will clear all your
-        							signature information. After this, you will need to
-        							attach a signature file again. Are you sure of this?
-        							"/>
-        					</group>
-        					<footer>
-        						<button name="action_clean" string="Yes" type="object"
-        							class="oe_highlight"/>
-        						or
-        						<button string="Cancel" class="oe_link" special="cancel"/>
-        					</footer>
-        				</form>
+                <form string="Clean Signature Information">
+                    <group>
+                        <p>
+                            This operation will clear all your
+                            signature information. After this, you will need to
+                            attach a signature file again. Are you sure of this?
+                        </p>
+                    </group>
+                    <footer>
+                        <button name="action_clean" string="Yes" type="object"
+                            class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
             </field>
         </record>
 
